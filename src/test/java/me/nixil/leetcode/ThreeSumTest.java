@@ -22,7 +22,6 @@ class ThreeSumTest {
   }
 
   @Test()
-  @Timeout(1)
   void sample2() {
     int[] nums = new int[] { 82597, -9243, 62390, 83030, -97960, -26521, -61011, 83390, -38677, 12333, 75987, 46091, 83794, 19355,
       -71037, -6242, -28801, 324, 1202, -90885, -2989, -95597, -34333, 35528, 5680, 89093, -90606, 50360, -29393, -27012, 53313,
@@ -207,9 +206,7 @@ class ThreeSumTest {
 
     List<List<Integer>> result = new ThreeSum().threeSum(nums);
 
-    result.forEach(x -> {
-      System.out.println(String.format(" %s , %s, %s", x.get(0), x.get(1), x.get(2)));
-    });
+    assertThat(result).isNotEmpty();
   }
 
 }
