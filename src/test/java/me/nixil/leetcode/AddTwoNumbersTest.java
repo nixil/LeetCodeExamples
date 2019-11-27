@@ -1,9 +1,9 @@
 package me.nixil.leetcode;
 
-import me.nixil.leetcode.AddTwoNumbers.ListNode;
+import me.nixil.leetcode.common.ListNode;
 import org.junit.jupiter.api.Test;
 
-import static me.nixil.leetcode.AddTwoNumbers.ListNode.build;
+import static me.nixil.leetcode.common.ListNode.build;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class AddTwoNumbersTest {
