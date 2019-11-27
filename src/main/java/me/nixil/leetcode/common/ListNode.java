@@ -12,7 +12,13 @@ public class ListNode {
 
   public static ListNode build(Integer... digits) {
     ListNode head = null, pre = null;
+    if (digits == null) {
+      throw new IllegalArgumentException("Null value is not allowed.");
+    }
     for (Integer x : digits) {
+      if (x == null) {
+        throw new IllegalArgumentException("Null elements is not allowed.");
+      }
       ListNode current = new ListNode(x);
       if (head == null) {
         head = current;

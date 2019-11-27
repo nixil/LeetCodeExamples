@@ -1,6 +1,5 @@
 package me.nixil.leetcode;
 
-import me.nixil.leetcode.common.ListNode;
 import org.junit.jupiter.api.Test;
 
 import static me.nixil.leetcode.common.ListNode.build;
@@ -18,20 +17,5 @@ class AddTwoNumbersTest {
     assertThat(solution.addTwoNumbers(build(9, 9, 9 ), build(1))).isEqualTo(build(0, 0, 0, 1));
     assertThat(solution.addTwoNumbers(build(3), build(0))).isEqualTo(build(3));
     assertThat(solution.addTwoNumbers(build(0), build(0))).isEqualTo(build(0));
-  }
-
-  @Test
-  void testBuilder() {
-    ListNode listNode = build(5, 4, 3);
-    assertThat(listNode.val).isEqualTo(5);
-    assertThat(listNode.next.val).isEqualTo(4);
-    assertThat(listNode.next.next.val).isEqualTo(3);
-    assertThat(listNode.next.next.next).isEqualTo(null);
-  }
-
-  @Test
-  void testEquals() {
-    assertThat(build(5, 4, 3)).isEqualTo(build(5, 4, 3));
-    assertThat(build(5)).isEqualTo(build(5));
   }
 }
