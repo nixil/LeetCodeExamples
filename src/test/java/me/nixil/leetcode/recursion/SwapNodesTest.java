@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class SwapNodesTest {
 
-  // @Test
+  @Test
   void test1() {
     assertThat(new SwapNodes().swapPairs(build(1, 2, 3, 4))).isEqualTo(build(2, 1, 4, 3));
   }
